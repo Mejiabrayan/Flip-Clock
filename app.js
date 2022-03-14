@@ -9,11 +9,12 @@ var Flipper = function() {
           this.setFrontTime(currentTime); // Our methods 
           this.setBackTime(nextTime); // Method
     }
+    
     Flipper.prototype.setFrontTime = function (time) {
-        this.frontNode.dataset.number = time;
+        this.frontNode.dataset.number = time;  // fetches our data set
     };
-    Flipper.prototype.setBackTime = function (time) {
-        this.backNode.dataset.number = time; 
+        Flipper.prototype.setBackTime = function (time) {
+        this.backNode.dataset.number = time; // fetches our data set
     };
     Flipper.prototype.flipDown = function (currentTime, nextTime) {
         var _this = this;
@@ -34,6 +35,8 @@ var Flipper = function() {
     };
     return Flipper;
 }();
+
+// Constructor Ends Here
 
 var getTimeFromDate = function (date) {
     return date.toTimeString().slice(0, 8).split(":").join("");
